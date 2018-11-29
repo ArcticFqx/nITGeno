@@ -1,0 +1,15 @@
+<!-- Template XML for Geno, DO NOT EDIT or you will have a bad time -->
+<ActorFrame>
+    <children>
+		<Layer Condition="lax.On.Cond['lib.geno'](1)"  File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+		<Layer Condition="lax.On.Cond['lib.geno'](2)"  File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+		<Layer Condition="lax.On.Cond['lib.geno'](3)"  File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+		<Layer Condition="lax.On.Cond['lib.geno'](4)"  File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+		<Layer Condition="lax.On.Cond['lib.geno'](5)"  File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+		<Layer Condition="lax.On.Cond['lib.geno'](6)"  File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+		<Layer Condition="lax.On.Cond['lib.geno'](7)"  File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+		<Layer Condition="lax.On.Cond['lib.geno'](8)"  File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+		<Layer Condition="lax.On.Cond['lib.geno'](9)"  File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+		<Layer Condition="lax.On.Cond['lib.geno'](10)" File="@lax.On.File['lib.geno']()" InitCommand="%lax.On.Init['lib.geno']" />
+    </children>
+</ActorFrame>

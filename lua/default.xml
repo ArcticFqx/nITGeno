@@ -1,0 +1,15 @@
+<ActorFrame>
+	<children>
+		<Layer 
+			Name="Root"
+			Condition="lax.On.Template['lib.geno'](
+
+				--[[ Template file: ]] 'lua.template'
+
+			)"
+			File="template.xml" 
+			InitCommand="%lax.On.InitCmd['lib.geno']"
+			OnCommand="%lax.On.OnCmd['lib.geno']"
+		/>
+	</children>
+</ActorFrame>
