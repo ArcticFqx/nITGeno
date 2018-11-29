@@ -13,7 +13,7 @@ local nodesPerAF = 10
         see: https://github.com/ArcticFqx/LibActor
 ]]
 
-local geno = { Def = {} }
+local geno = { Def = {}, Actors = {} }
 
 local log = nodesPerAF == 10
             and math.log10
@@ -22,7 +22,6 @@ local log = nodesPerAF == 10
                 end
 
 local template = {}
-local actors = {}
 local actorLookup = {}
 local stack = {}
 
@@ -139,13 +138,13 @@ end
 
 -- These runs at the very end when everything has been built
 function geno.InitCmd(self)
-    actors[0] = self
+    Actors[0] = self
     runCommand(template.InitCommand, self)
 end
 
 -- OnCommand Time
 function geno.OnCmd(_, a)
-    a = a or actors
+    a = a or Actors
     for k,v in ipairs(a) do
         if type(v) == "table" then
             geno.OnCmd(_, v)
@@ -161,7 +160,7 @@ function geno.Template(file)
     --print("Template:", file)
     template = lax.Require(file)
     NewLayer(template)
-    actors = stack:Top().a
+    stack:Top().a = Actors
     return true
 end
 
