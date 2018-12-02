@@ -138,13 +138,13 @@ end
 
 -- These runs at the very end when everything has been built
 function geno.InitCmd(self)
-    Actors[0] = self
+    geno.Actors[0] = self
     runCommand(template.InitCommand, self)
 end
 
 -- OnCommand Time
 function geno.OnCmd(_, a)
-    a = a or Actors
+    a = a or geno.Actors
     for k,v in ipairs(a) do
         if type(v) == "table" then
             geno.OnCmd(_, v)
@@ -160,7 +160,7 @@ function geno.Template(file)
     --print("Template:", file)
     template = lax.Require(file)
     NewLayer(template)
-    stack:Top().a = Actors
+    stack:Top().a = geno.Actors
     return true
 end
 
