@@ -139,6 +139,7 @@ end
 -- These runs at the very end when everything has been built
 function geno.InitCmd(self)
     geno.Actors[0] = self
+    actorLookup[self] = geno.Actors
     runCommand(template.InitCommand, self)
 end
 
