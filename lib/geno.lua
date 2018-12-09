@@ -17,7 +17,7 @@ local geno = { Def = {}, Actors = {} }
 
 local log = nodesPerAF == 10
             and math.log10
-            or  function(n) 
+            or  function(n)
                     return math.log(n)/math.log(nodesPerAF) 
                 end
 
@@ -30,7 +30,8 @@ local getn = table.getn
 local lower = string.lower
 
 local function GetDepth(t)
-    return ceil(log(getn(t)))
+    local depth = ceil(log(getn(t)))
+    return depth > 0 and depth or 1
 end
 
 function stack:Push(entry)
